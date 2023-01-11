@@ -58,7 +58,7 @@
       }
 
       .cards {
-        background-color: black;
+
         display: flex;
         justify-content: space-around;
         width: 100%;
@@ -71,6 +71,35 @@
         display: flex;
         justify-content: center;
         background-color: #eef9bf;
+      }
+
+      @media (max-width:335px){
+
+       .titulo {
+        font-size: 36px;
+        width: 312px;
+        height: 63px;
+        line-height: 42px;
+
+        display: flex;
+        justify-content: center;
+        text-align: center;
+       }
+
+       .topo {
+        display: flex;
+        justify-content: center;
+       
+       }
+
+       .cards {
+
+        flex-direction: column;
+        height: 700px;
+        justify-content: space-around;
+        align-items: center;
+       
+       }
       }
 
   
