@@ -2,11 +2,6 @@ let qtdCartas = prompt("Com quantas cartas quer jogar?");
 
 criarCarta();
 
-
-
-
-
-console.log("qtdCartas", qtdCartas);
 function criarCarta () {
 
     while (!(qtdCartas >= 4 && qtdCartas%2 == 0 && qtdCartas <= 14)) {
@@ -15,9 +10,9 @@ function criarCarta () {
  let contador = 0; 
  
  while (contador < qtdCartas){
-    console.log("contador: ", contador);
+  
     document.querySelector(".container").innerHTML += `
-    <div class="card">
+    <div onclick="virarCarta(this)" class="card">
     <div class="front-face face">
       <img src="./imagens/back.png" />
     </div>
@@ -28,3 +23,9 @@ function criarCarta () {
   contador++;   
  }
 }
+
+function virarCarta(botaonoThis) {
+
+botaonoThis.classList.add('revelarcarta');
+}
+

@@ -27,7 +27,7 @@
           .container{
             width: 872px;
             height: 500px;
-          
+         
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -66,16 +66,21 @@
             transform-style: preserve-3d;
           }
     
+          
           .back-face {
+            
             transform: rotateY(180deg);
           }
-    
-          .card:hover .back-face {
-            transform: rotateY(0deg);
+          
+          .front-face {
+            backface-visibility:hidden;
           }
-    
-          .card:hover .front-face {
-            transform: rotateY(-180deg);
+          
+      
+          .revelarcarta {
+             transform: rotateY(180deg);
+             transform-style: preserve-3d;
+             transition: all .5s;
           }
 
           img {
