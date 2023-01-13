@@ -8,9 +8,13 @@ let carta1 = "";
 let carta2 = "";
 
 let jogadas = 0;
+let tempo = 0;
+let idIntervalo;
 
 
 criarCarta();
+contar ();
+
 
 
 function criarCarta() {
@@ -45,6 +49,7 @@ function criarCarta() {
   }
 
 } 
+
 
 function virarCarta(botaonoThis) {
  
@@ -91,6 +96,7 @@ function verificarCarta(cartaVirada) {
 }
 
 
+
 function endgame(){
 
   let qtdCartasViradas = document.querySelectorAll('.revelarcarta').length;
@@ -98,14 +104,39 @@ function endgame(){
     if (Number(qtdCartas) === qtdCartasViradas ){
 
       setTimeout(() => {
-
-        alert (`Você ganhou em ${jogadas} jogadas!`);
         
+        alert (`Você ganhou em ${jogadas} jogadas! A duração do jogo foi ${tempo} de segundos!`);
+        clearInterval(idIntervalo);
+        
+
       }, 1000)
 
     
 }
 }
+
+
+
+
+
+
+function contar(){
+
+
+ idIntervalo = setInterval(acrescentarContador, 1000);
+  
+}
+
+function acrescentarContador(){
+  
+  tempo++;
+
+  const elementoContador = document.querySelector(".contador");
+  elementoContador.innerHTML = tempo;
+
+  
+  }
+
 
 
 

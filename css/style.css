@@ -4,6 +4,7 @@
           }
 
           .titulo {
+           
             
             width: 550px;
             height: 63px;
@@ -15,10 +16,11 @@
             display: flex;
             justify-content: center;
             margin-top: 40px;
+            margin-left: 670px;
           }
 
           .topo {
-           
+            
             width: 100%;
             display: flex;
             justify-content: center;
@@ -90,4 +92,25 @@
           img {
             width: 100px;
             height: 100px;
+          }
+
+          .caixa-do-contador {
+            background-color:black;
+            padding: 10px;
+            border-radius: 5px;
+           margin-left: auto;
+            text-align: center;
+
+          }
+          
+          .contador {
+            font-family: 'Roboto', sans-serif;
+            color: white;
+            font-size: 4em;
+          }
+          
+          .rotulo {
+            font-family: 'Roboto', sans-serif;
+            color: white;
+            font-size: 1em;
           }
