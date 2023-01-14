@@ -74,7 +74,7 @@ function virarCarta(botaonoThis) {
 
 
 function verificarCarta(cartaVirada) {
-  console.log(carta1, carta2)
+  
 
   let cartaRevelada = document.querySelector('.imgFront').getAttribute('src');
   
@@ -108,14 +108,21 @@ function endgame(){
         alert (`Você ganhou em ${jogadas} jogadas! A duração do jogo foi ${tempo} de segundos!`);
         clearInterval(idIntervalo);
         
+        let resposta = prompt('Você gostaria de reiniciar a partida? sim ou não?');
+
+        let sim = 'sim';
+
+        if (resposta === 'sim'){
+
+          atualizar();
+        } 
+        
 
       }, 1000)
 
     
 }
 }
-
-
 
 
 
@@ -137,6 +144,10 @@ function acrescentarContador(){
   
   }
 
+
+  function atualizar (){
+    window.location.reload();
+  }
 
 
 
